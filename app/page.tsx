@@ -190,7 +190,7 @@ export default function Home() {
             }
           </div>
           <br/>
-          {keyPairs.map((value:any)=><DisplayKeyPairs pairs={value} setKeyPairs={setKeyPairs}/>)}
+          {keyPairs.map((value:any,index:number)=><DisplayKeyPairs key={index} pairs={value} setKeyPairs={setKeyPairs}/>)}
         </div>
       </div>
     </main>
