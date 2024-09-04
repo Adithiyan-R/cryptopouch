@@ -145,10 +145,13 @@ export default function Home() {
   }
 
   useEffect(()=>{
-    const pairs = localStorage.getItem('keyPairs') || "";
-    setKeyPairs(JSON.parse(pairs));
-    const c = localStorage.getItem('count') || '0';
-    setCount(c);
+    const pairs = localStorage.getItem('keyPairs');
+    if(pairs)
+    {
+      setKeyPairs(JSON.parse(pairs));
+      const c = localStorage.getItem('count') || '0';
+      setCount(c);
+    }
   },[])
 
 
